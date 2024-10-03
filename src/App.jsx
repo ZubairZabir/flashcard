@@ -5,9 +5,9 @@ import "./App.css";
 const flashcardsData = [
   {
     question: "What is React?",
-    answer: "A Javascript library for building UIs",
+    answer: "A JavaScript library for building UIs",
   },
-  { question: "What is JSX?", answer: "A syntax extension for Javascript" },
+  { question: "What is JSX?", answer: "A syntax extension for JavaScript" },
   { question: "What is a component?", answer: "Reusable pieces of UI" },
   {
     question: "What is a hook in React?",
@@ -24,7 +24,7 @@ const App = () => {
 
   const previousCard = () => {
     setCurrentCardIndex((prevIndex) =>
-      prevIndex === 0 ? flashcardsData.length - 1 : prevIndex - 2
+      prevIndex === 0 ? flashcardsData.length - 1 : prevIndex - 1
     );
   };
 

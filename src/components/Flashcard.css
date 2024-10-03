@@ -1,27 +1,46 @@
 /* Flashcard.css */
 
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: black; /* Makes the whole screen black */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
 .flashcard {
-  width: 300px;
+  width: 100%; /* Makes it responsive to different screen sizes */
+  max-width: 300px; /* Ensures the card has a maximum width */
   height: 200px;
-  border: 2px solid #333;
-  border-radius: 8px;
+  border: 2px solid #444; /* Darker border for better visibility */
+  border-radius: 12px; /* Smoother look */
   padding: 20px;
-  margin: 20px;
+  margin: 0 auto; /* Centers the card horizontally */
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2em;
   text-align: center;
-  background-color: #f9f9f9;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
+  background-color: #ffffff; /* White background for the card */
+  color: black; /* Black text inside the card */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer; /* Adds a pointer cursor to indicate interactivity */
 }
 
 .flashcard:hover {
-  background-color: #f1f1f1;
+  background-color: #e0e0e0; /* Slightly darker background on hover */
   transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow for hover state */
 }
 
 .flashcard:active {
-  transform: scale(0.95);
+  background-color: #d0d0d0; /* Darker background when active */
+  transform: scale(0.97); /* Slightly reduced scale for a better press effect */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* A more subtle box-shadow when active */
 }

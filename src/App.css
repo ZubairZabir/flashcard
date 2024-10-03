@@ -1,47 +1,71 @@
 .App {
   text-align: center;
   font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black; /* Ensures all text in the app is black */
 }
 
 .flashcard-container {
   margin: 20px auto;
-  width: 300px;
-  height: 200px;
+  width: 320px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flashcard {
-  border: 2px solid #000;
+  border: 2px solid #333;
   padding: 20px;
   margin: 20px;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
   font-size: 1.2em;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f4f4f4;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
 }
 
 .flashcard:hover {
-  background-color: #ddd;
+  background-color: #f0f0f0;
+  transform: scale(1.05);
 }
 
 .buttons {
   margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
 
 button {
   padding: 10px 20px;
-  margin: 0 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: #007bff;
   color: white;
   font-size: 1em;
+  font-weight: 500;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #0056b3;
+}
+
+button:active {
+  background-color: #004099;
+  transform: scale(0.95);
 }
